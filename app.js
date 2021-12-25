@@ -19,7 +19,7 @@ const getQuotesFromAPI = async () => {
 		const response = await fetch(apiUrl);
 		apiQuotes = await response.json();
 		const quote = apiQuotes[generateRandomNumber(apiQuotes.length - 1)];
-		showQuote(quote);
+		displayQuoteToUI(quote);
 	} catch (error) {
 		// display an error if something went wrong
 		getQuotesFromLocalDB();
