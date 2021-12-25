@@ -30,7 +30,7 @@ const getQuotesFromAPI = async () => {
 const getQuotesFromLocalDB = () => {
 	try {
 		const data = localQuotes[generateRandomNumber(localQuotes.length - 1)];
-		showQuote(data);
+		displayQuoteToUI(data);
 	} catch (error) {
 		console.log(error);
 	}
